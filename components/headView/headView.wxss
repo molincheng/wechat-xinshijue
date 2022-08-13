@@ -1,0 +1,38 @@
+.header {
+  width: 750rpx;
+  height: 90rpx;
+  border: 1rpx solid red;
+}
+
+.hdCon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 26rpx;
+}
+.pic {
+  height: 100%;
+}
+
+.hdCon .logo,
+.kefu {
+  height: 50rpx;
+}
+
+.kefu {
+  position: relative;
+}
+
+.kefu .btn {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation: dh 1.2s linear infinite;
+  background-color: white;
+}
+

@@ -1,0 +1,59 @@
+<head-view></head-view>
+
+<view class="banner">
+  <swiper indicator-dots="true" indicator-color="rgba(255,255,255,.5)" interval="4000" autoplay indicator-active-color="#fff">
+    <swiper-item>
+      <image src="/iamges/banner1.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/iamges/banner2.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/iamges/banner3.jpg"></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+<scroll-view class="major" scroll-x>
+  <navigator hover-class="none" url="{{item.src}}" open-type="{{item.openType}}" wx:key="item" class="box" wx:for="{{majorArr}}">
+    <image class="pic" src="{{item.picUrl}}"></image>
+    <view class="txt">{{item.text}}</view>
+  </navigator>
+</scroll-view>
+
+<view class="works">
+  <view class="container">
+   <PubTitle url="/pages/works/works" title="学院作品"></PubTitle>
+    <view class="wkMain">
+      <navigator class="box" wx:for="{{workArr}}" wx:key="idnex">
+        <image class="pic" src="{{item.picImg}}"></image>
+        <view class="ceng">
+          <view class="tit">{{item.title}}</view>
+          <view class="line"> </view>
+          <view class="des">UI design works</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
+
+<view class="dynamic">
+  <view class="container">
+    <PubTitle url="/pages/ps/ps" title="行业动态"></PubTitle>
+    <view class="dyMain">
+      <navigator class="dyItem" wx:for="{{dynewLists}}" wx:key="index">
+        <view class="pic">
+          <image src="{{item.picurl}}"></image>
+        </view>
+        <view class="txt">
+          <view class="title">{{item.title}}</view>
+          <view class="info">
+            <text> 作者：</text>{{item.author}}<text space="ensp"> - </text> <text> 时间：</text>{{item.posttime}}
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
+
+<footer-view></footer-view>
